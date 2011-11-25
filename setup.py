@@ -48,6 +48,6 @@ setup(name=NAME,
       platforms=PLATFORMS,
       url=URL,
       classifiers=CLASSIFIERS,
-      packages=['auth.credential'],
+      packages=['auth', 'auth.credential', 'auth.credential.modules'],
       cmdclass={'test' : test}
      )
