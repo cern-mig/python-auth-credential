@@ -16,6 +16,7 @@ It supports the following attributes:
 - pass
     the associated (clear text) password
 
+Copyright (C) 2011 CERN
 """
 __version__ = "$Revision: 1 $"
 # $Source$

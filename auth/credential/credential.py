@@ -108,6 +108,7 @@ Here is for instance how it could end up using JSON:
 
 The same information could be stored in a configuration file.
 
+Copyright (C) 2011 CERN
 """
 __version__ = "$Revision: 1 $"
 # $Source$

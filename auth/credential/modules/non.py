@@ -9,6 +9,8 @@ This helper module for Credential implements a "none" credential,
 that is the absence of authentication credential.
 
 It does not support any attributes.
+
+Copyright (C) 2011 CERN
 """
 __version__ = "$Revision: 1 $"
 # $Source$

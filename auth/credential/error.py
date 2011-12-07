@@ -1,5 +1,7 @@
 """
 Error
+
+Copyright (C) 2011 CERN
 """
 __version__ = "$Revision: 1 $"
 # $Source$

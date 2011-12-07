@@ -1,5 +1,7 @@
 """
  Testing package for auth.credential
+ 
+ Copyright (C) 2011 CERN
 """
 
 import os

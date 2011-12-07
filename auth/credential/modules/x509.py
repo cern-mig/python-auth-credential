@@ -21,6 +21,8 @@ It supports the following attributes:
 
 - ca
     the path of the directory containing trusted certificates (optional)
+    
+Copyright (C) 2011 CERN
 """
 __version__ = "$Revision: 1 $"
 # $Source$

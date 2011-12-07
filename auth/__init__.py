@@ -13,6 +13,8 @@ See the License for the specific language governing permissions and
 limitations under the License.
 
 auth.credential
+
+Copyright (C) 2011 CERN
 """
 __version__ = "$Revision: 1 $"
 # $Source$
