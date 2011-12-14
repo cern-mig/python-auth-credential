@@ -12,6 +12,7 @@ Contents:
    :maxdepth: 2
 
    credential
+   modules
    error
 
 .. automodule:: auth.credential

@@ -1,25 +1,25 @@
 """
-plain - abstraction of a "plain" credential
+Plain Credential
+================
 
-===========
-DESCRIPTION
-===========
+:py:meth:`Plain` - abstraction of a *plain* credential
 
-This helper module for Credential implements a "plain" credential,
+Description
+-----------
+
+This helper module for Credential implements a *plain* credential,
 that is a pair of name and clear text password.
 
 It supports the following attributes:
 
-- name
+name
     the (usually user) name
 
-- pass
+pass
     the associated (clear text) password
 
 Copyright (C) 2011 CERN
 """
-__version__ = "$Revision: 1 $"
-# $Source$
 
 from auth.credential import Credential
 import base64

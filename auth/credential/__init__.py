@@ -1,18 +1,19 @@
 """
-Licensed under the Apache License, Version 2.0 (the "License"); 
-you may not use this file except in compliance with the License. 
-You may obtain a copy of the License at 
+This module offers an abstraction of a credential, i.e. something that
+can be used to authenticate. It allows the creation and manipulation of
+credentials. In particular, it defines a standard string representation
+(so that credentials can be given to external programs as command line
+options), a standard structured representation (so that credentials can
+be stored in structured configuration files or using JSON) and
+"preparators" that can transform credentials into ready-to-use data for
+well known targets.
 
-    http://www.apache.org/licenses/LICENSE-2.0 
+You can download the module at the following link:
+http://pypi.python.org/pypi/auth.credential/
 
-Unless required by applicable law or agreed to in writing, software 
-distributed under the License is distributed on an "AS IS" BASIS, 
-WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, 
-either express or implied. 
-See the License for the specific language governing permissions and 
-limitations under the License.
-
-auth.credential
+An Perl implementation of the same credential abstraction is available
+in CPAN:
+http://search.cpan.org/~lcons/Authen-Credential/
 
 Copyright (C) 2011 CERN
 """

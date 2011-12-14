@@ -1,19 +1,19 @@
 """
-non - abstraction of a "none" credential
+None Credential
+===============
 
-===========
-DESCRIPTION
-===========
+:py:meth:`Non` - abstraction of a *none* credential
 
-This helper module for Credential implements a "none" credential,
+Description
+-----------
+
+This helper module for Credential implements a *none* credential,
 that is the absence of authentication credential.
 
 It does not support any attributes.
 
 Copyright (C) 2011 CERN
 """
-__version__ = "$Revision: 1 $"
-# $Source$
 
 from auth.credential import Credential
 

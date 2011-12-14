@@ -1,6 +1,6 @@
 
-Auth.credential Errors
-======================
+Errors
+======
 
 .. automodule:: auth.credential.error
     :members:

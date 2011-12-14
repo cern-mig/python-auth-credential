@@ -1,31 +1,31 @@
 """
-x509 - abstraction of an X.509 credential
+X509 Credential
+===============
 
-===========
-DESCRIPTION
-===========
+:py:meth:`X509` - abstraction of an X.509 credential
+
+Description
+-----------
 
 This helper module for Credential implements an X.509
-credential, see L<http://en.wikipedia.org/wiki/X.509>.
+credential, see http://en.wikipedia.org/wiki/X.509.
 
 It supports the following attributes:
 
-- cert
+cert
     the path of the file holding the certificate
 
-- key
+key
     the path of the file holding the private key
 
-- pass
+pass
     the pass-phrase protecting the private key (optional)
 
-- ca
+ca
     the path of the directory containing trusted certificates (optional)
     
 Copyright (C) 2011 CERN
 """
-__version__ = "$Revision: 1 $"
-# $Source$
 
 from auth.credential import Credential
 
