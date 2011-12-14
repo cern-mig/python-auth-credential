@@ -1,9 +1,10 @@
 """
-Credential - abstraction of a credential
+:py:meth:`Credential` - abstraction of a credential
 
+Synopsis
 ========
-SYNOPSIS
-========
+
+Example::
 
   import auth.credential as credential
   from auth.credential.modules.plain import Plain
@@ -48,9 +49,8 @@ SYNOPSIS
   params = cred.prepare('stomppy.x509')
   conn = stomp.Connection(host_and_ports, **params)
   
-  
-===========
-DESCRIPTION
+
+Description
 ===========
 
 This module offers an abstraction of a credential, i.e. something that
@@ -71,18 +71,17 @@ fixed set of string attributes. For instance, the *plain* scheme has
 two attributes: *name* and *pass*. More information is provided by
 the scheme specific module, for instance Plain.
 
-=====================
-STRING REPRESENTATION
+String representation
 =====================
 
 The string representation of a credential is made of its scheme
 followed by its attributes as key=value pairs, seperated by space.
 
-For instance, for the *none* scheme with no attributes:
+For instance, for the *none* scheme with no attributes::
 
   none
 
-And the the *plain* scheme with a name and password:
+And the the *plain* scheme with a name and password::
 
   plain name=system pass=manager
 
@@ -91,18 +90,18 @@ non-alphanumerical characters should be escaped to avoid parsing
 ambiguities.
 
 The string representation is useful to give a program through its
-command line options. For instance:
+command line options. For instance::
 
   myprog --uri http://foo:80 --auth "plain name=system pass=manager"
 
-=========================
-STRUCTURED REPRESENTATION
+
+Structured representation
 =========================
 
 The structured representation of a credential is made of its scheme
 and all its attributes as a string table.
 
-Here is for instance how it could end up using JSON:
+Here is for instance how it could end up using JSON::
 
   {"scheme":"plain","name":"system","pass":"manager"}
 
