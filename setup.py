@@ -1,5 +1,5 @@
 NAME = 'auth.credential'
-VERSION = '0.2'
+VERSION = '0.5'
 DESCRIPTION = "Credential abstraction"
 LONG_DESCRIPTION = """
 Credential representation
