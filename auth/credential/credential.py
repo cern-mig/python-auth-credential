@@ -107,10 +107,8 @@ Here is for instance how it could end up using JSON::
 
 The same information could be stored in a configuration file.
 
-Copyright (C) 2011 CERN
+Copyright (C) 2012 CERN
 """
-__version__ = "$Revision: 1 $"
-# $Source$
 
 from auth.credential.error import InvalidCredential
 import re
@@ -187,7 +185,6 @@ class Credential(object):
             option = dict()
         if 'scheme' in self._keys and 'scheme' not in option:
             option['scheme'] = self._keys['scheme']['match']
-            print("<%s>" % option['scheme'])
         for key, value in self._keys.items():
             optional = value.get("optional", False)
             if (not optional) and key not in option:
@@ -200,9 +197,13 @@ class Credential(object):
                 raise InvalidCredential("attribute not expected: %s" % key)
             self.__dict__[key] = value
             
-    def __getitem__(self, name):
+    def __contains__(self, item):
+        """ Return True if item is present. """
+        return item in self.__dict__
+            
+    def __getitem__(self, item):
         """ Return item from attributes. """
-        return self.__dict__[name]
+        return self.__dict__[item]
     
     def dict(self):
         """ Return a dict representation of the credential. """
@@ -227,8 +228,18 @@ class Credential(object):
         return ' '.join(partial)
     
     def check(self):
-        """ Check if the given authentication is valid.
-        Return True if not implemented. """
+        """ Check if the given authentication is valid. """
+        for key, value in self.__dict__.items():
+            if key not in self._keys:
+                raise InvalidCredential("attribute not expected: %s" % key)
+        for key, value in self._keys.items():
+            optional = value.get("optional", False)
+            if (not optional) and key not in self.__dict__:
+                raise InvalidCredential("attribute missing: %s" % key)
+            match = value.get('match', None)
+            if match is not None and self.__dict__[key] != match:
+                raise InvalidCredential("invalid value for: %s" % key)
+        # so far so good
         return True
     
     def __eq__(self, other):

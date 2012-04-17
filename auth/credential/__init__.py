@@ -15,9 +15,14 @@ An Perl implementation of the same credential abstraction is available
 in CPAN:
 http://search.cpan.org/~lcons/Authen-Credential/
 
-Copyright (C) 2011 CERN
+Copyright (C) 2012 CERN
 """
-__version__ = "$Revision: 1 $"
-# $Source$
+AUTHOR = "Massimo Paladin <massimo.paladin@gmail.com>"
+COPYRIGHT = "Copyright (C) 2012 CERN"
+VERSION = "0.6"
+DATE = "17 Apr 2012"
+__author__ = AUTHOR
+__version__ = VERSION
+__date__ = DATE
 
 from auth.credential.credential import new, parse, Credential

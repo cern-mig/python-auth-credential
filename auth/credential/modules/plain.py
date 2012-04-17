@@ -18,7 +18,7 @@ name
 pass
     the associated (clear text) password
 
-Copyright (C) 2011 CERN
+Copyright (C) 2012 CERN
 """
 
 from auth.credential import Credential
@@ -30,11 +30,6 @@ class Plain(Credential):
              'pass': dict(),}
     _preparator = dict()
     
-    def check(self):
-        """ Check the none credential object """
-        if self.__dict__ is None:
-            return True
-        
     def _prepare_http_basic(self):
         """ Return the Authorization header for an HTTP Request """
         tmp = "%s:%s" % (self.__dict__['name'], self.__dict__['pass'])

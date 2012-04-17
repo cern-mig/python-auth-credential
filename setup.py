@@ -1,5 +1,7 @@
+import auth.credential
+
 NAME = 'auth.credential'
-VERSION = '0.5'
+VERSION = auth.credential.VERSION
 DESCRIPTION = "Credential abstraction"
 LONG_DESCRIPTION = """
 Credential representation

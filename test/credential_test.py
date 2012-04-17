@@ -12,7 +12,7 @@ either express or implied.
 See the License for the specific language governing permissions and 
 limitations under the License.
 
-Copyright (C) 2011 CERN
+Copyright (C) 2012 CERN
 """
 
 import auth.credential as credential
@@ -101,6 +101,7 @@ class AuthTest(unittest.TestCase):
                 self.assertEqual(rep, cred_struct,
                                  "expected to be equal:\n<%s>\n<%s>" %
                                  (cred, cred_struct))
+                cred.check()
                 continue
             # else
             try:

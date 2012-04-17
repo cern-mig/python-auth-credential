@@ -24,7 +24,7 @@ pass
 ca
     the path of the directory containing trusted certificates (optional)
     
-Copyright (C) 2011 CERN
+Copyright (C) 2012 CERN
 """
 
 from auth.credential import Credential
@@ -37,11 +37,6 @@ class X509(Credential):
              'ca': {'optional' : True}}
     _preparator = dict()
     
-    def check(self):
-        """ Check the none credential object """
-        if self.__dict__ is None:
-            return True
-        
     def _prepare_stomppy(self):
         """ Return parameter to be passed to stomppy creating connection """
         params = {'use_ssl' : True}
