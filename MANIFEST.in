@@ -1,2 +1,2 @@
-include LICENSE README CHANGES
+include LICENSE README.rst CHANGES
 include test/*

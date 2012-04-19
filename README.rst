@@ -1,4 +1,11 @@
-auth.credential
+======================
+python-auth-credential
+======================
+
+.. image:: https://secure.travis-ci.org/mpaladin/python-auth-credential.png?branch=master
+
+Overview
+========
 
 This module offers an abstraction of a credential, i.e. something that
 can be used to authenticate. It allows the creation and manipulation of
@@ -11,26 +18,32 @@ well known targets.
 
 An Perl implementation of the same credential abstraction is available
 in CPAN:
-http://search.cpan.org/~lcons/Authen-Credential/
 
-INSTALLATION
+    http://search.cpan.org/~lcons/Authen-Credential/
 
-To install this module, run the following command:
+Install
+=======
+
+To install this module, run the following command::
 
     python setup.py install
 
-To test this module, run the following command:
+To test this module, run the following command::
 
     python setup.py test
 
-SUPPORT AND DOCUMENTATION
+Support and documentation
+=========================
 
 After installing, you can find documentation for this module with the
-standard python help function command.
+standard python help function command or at the following url:
 
-LICENSE AND COPYRIGHT
+   http://mpaladin.web.cern.ch/mpaladin/python/auth.credential/ 
 
-Copyright (C) 2011 CERN
+License and Copyright
+=====================
+
+Copyright (C) 2012 CERN
 
 Licensed under the Apache License, Version 2.0 (the "License"); 
 you may not use this file except in compliance with the License. 
