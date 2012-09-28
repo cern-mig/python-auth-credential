@@ -24,18 +24,19 @@ Copyright (C) 2012 CERN
 from auth.credential import Credential
 import base64
 
+
 class Plain(Credential):
-    _keys = {'scheme' : {'match' : 'plain'},
+    _keys = {'scheme': {'match': 'plain'},
              'name': dict(),
-             'pass': dict(),}
+             'pass': dict(), }
     _preparator = dict()
-    
+
     def _prepare_http_basic(self):
         """ Return the Authorization header for an HTTP Request """
         tmp = "%s:%s" % (self.__dict__['name'], self.__dict__['pass'])
         return "Basic %s" % base64.b64encode(tmp.encode()).decode()
     _preparator["HTTP.Basic"] = "_prepare_http_basic"
-    
+
     def _prepare_stomppy_plain(self):
         """ Return parameter to be passed to stomppy creating connection """
         params = dict()

@@ -15,9 +15,9 @@ It does not support any attributes.
 Copyright (C) 2012 CERN
 """
 
+
 from auth.credential import Credential
 
+
 class Non(Credential):
-    _keys = {'scheme' : {'match' : 'none'}}
-    
-    
+    _keys = {'scheme': {'match': 'none'}}

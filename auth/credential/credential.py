@@ -8,7 +8,7 @@ Example::
 
   import auth.credential as credential
   from auth.credential.modules.plain import Plain
-  
+
   try:
       from urllib.request import Request
   except ImportError:
@@ -26,29 +26,29 @@ Example::
   # access the credential attributes
   if (cred.scheme == "plain"):
       print("user name is %s", cred.name)
-      
+
   ### HTTP examples
 
   # use the prepare() method to get ready-to-use data
   headers = {"Authorization" : cred.prepare('HTTP.Basic')}
   req = Request("http://localhost", headers=headers)
-  
+
   ### stomppy examples
-  
+
   import stomp
-  
+
   # plain example
   host_and_ports = [ ('localhost', 61613) ]
   params = cred.prepare('stomppy.plain')
   conn = stomp.Connection(host_and_ports, **params)
-  
+
   # x509 example
   host_and_ports = [ ('localhost', 61612) ]
   option = {'scheme' : 'x509', 'key' : 'path/to/key', 'cert' : 'path/to/cert'}
   cred = credential.new(**option)
   params = cred.prepare('stomppy.x509')
   conn = stomp.Connection(host_and_ports, **params)
-  
+
 
 Description
 ===========
@@ -126,6 +126,7 @@ _VAL_CHARS = 'a-zA-Z0-9/\-\+\_\~\.\:'
 _ID_VAL = "^(%s)=([%s\%%]*)$" % (_ID_RE, _VAL_CHARS)
 ID_VAL = re.compile(_ID_VAL)
 
+
 def parse(string):
     """
     Parse a string containing authentication information
@@ -133,11 +134,11 @@ def parse(string):
     """
     string = string.strip()
     if not string:
-        return new(scheme = 'none')
+        return new(scheme='none')
     auth = dict()
     tokens = SEP_CHARS.split(string)
     if len(tokens) == 0:
-        raise InvalidCredential("invalid authentication string: %s" % string )
+        raise InvalidCredential("invalid authentication string: %s" % string)
     if ID_RE.match(tokens[0]):
         auth['scheme'] = tokens[0]
         tokens.remove(tokens[0])
@@ -146,13 +147,14 @@ def parse(string):
         key_value = format.match(token)
         if not key_value:
             raise InvalidCredential("invalid authentication key=value: %s"
-                            % token)
+                                    % token)
         if key_value.group(1) in auth:
             raise InvalidCredential("duplicate authentication key: %s"
-                            % key_value.group(1))
+                                    % key_value.group(1))
         else:
             auth[key_value.group(1)] = unquote(key_value.group(2))
     return new(**auth)
+
 
 def new(**option):
     """
@@ -175,10 +177,11 @@ def new(**option):
         pass
     raise InvalidCredential("credential type not valid: %s" % atype)
 
+
 class Credential(object):
     _keys = []
     _preparator = None
-    
+
     def __init__(self, **option):
         """ Credential constructor """
         if option is None:
@@ -196,23 +199,23 @@ class Credential(object):
             if key not in self._keys:
                 raise InvalidCredential("attribute not expected: %s" % key)
             self.__dict__[key] = value
-            
+
     def __contains__(self, item):
         """ Return True if item is present. """
         return item in self.__dict__
-            
+
     def __getitem__(self, item):
         """ Return item from attributes. """
         return self.__dict__[item]
-    
+
     def dict(self):
         """ Return a dict representation of the credential. """
         return self.__dict__
-    
+
     def __repr__(self):
         """ Return string representation of the object. """
         return self.string()
-    
+
     def string(self):
         """ Convert the given authentication information into a string. """
         try:
@@ -226,7 +229,7 @@ class Credential(object):
                 continue
             partial.append("%s=%s" % (key, quote(value, _VAL_CHARS)))
         return ' '.join(partial)
-    
+
     def check(self):
         """ Check if the given authentication is valid. """
         for key, value in self.__dict__.items():
@@ -241,17 +244,17 @@ class Credential(object):
                 raise InvalidCredential("invalid value for: %s" % key)
         # so far so good
         return True
-    
+
     def __eq__(self, other):
         """ Check if the credential is equal to the given one. """
         if not isinstance(other, Credential):
             return False
         return self.__dict__ == other.__dict__
-    
+
     def equals(self, other):
         """ Check if the credential is equal to the given one. """
         return self.__eq__(other)
-    
+
     def prepare(self, target):
         """ Generic preparator. """
         if target not in self._preparator:

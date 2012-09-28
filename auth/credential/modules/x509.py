@@ -23,23 +23,24 @@ pass
 
 ca
     the path of the directory containing trusted certificates (optional)
-    
+
 Copyright (C) 2012 CERN
 """
 
 from auth.credential import Credential
 
+
 class X509(Credential):
-    _keys = {'scheme' : {'match' : 'x509'},
-             'cert' : {'optional' : True},
-             'key': {'optional' : True},
-             'pass': {'optional' : True},
-             'ca': {'optional' : True}}
+    _keys = {'scheme': {'match': 'x509'},
+             'cert': {'optional': True},
+             'key': {'optional': True},
+             'pass': {'optional': True},
+             'ca': {'optional': True}}
     _preparator = dict()
-    
+
     def _prepare_stomppy(self):
         """ Return parameter to be passed to stomppy creating connection """
-        params = {'use_ssl' : True}
+        params = {'use_ssl': True}
         if self.__dict__.get('key'):
             params['ssl_key_file'] = self.__dict__.get('key')
         if self.__dict__.get('cert'):
