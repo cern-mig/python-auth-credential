@@ -12,7 +12,7 @@ that is the absence of authentication credential.
 
 It does not support any attributes.
 
-Copyright (C) 2012 CERN
+Copyright (C) 2013 CERN
 """
 
 

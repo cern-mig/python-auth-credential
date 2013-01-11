@@ -15,10 +15,10 @@ An Perl implementation of the same credential abstraction is available
 in CPAN:
 http://search.cpan.org/~lcons/Authen-Credential/
 
-Copyright (C) 2012 CERN
+Copyright (C) 2013 CERN
 """
 AUTHOR = "Massimo Paladin <massimo.paladin@gmail.com>"
-COPYRIGHT = "Copyright (C) 2012 CERN"
+COPYRIGHT = "Copyright (C) 2013 CERN"
 VERSION = "0.6"
 DATE = "17 Apr 2012"
 __author__ = AUTHOR

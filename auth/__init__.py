@@ -14,5 +14,5 @@ limitations under the License.
 
 auth.credential
 
-Copyright (C) 2012 CERN
+Copyright (C) 2013 CERN
 """
