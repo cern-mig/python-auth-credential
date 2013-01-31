@@ -10,7 +10,7 @@ AUTHOR = 'Massimo Paladin'
 AUTHOR_EMAIL = 'massimo.paladin@gmail.com'
 LICENSE = "ASL 2.0"
 PLATFORMS = "Any"
-URL = "https://github.com/mpaladin/python-auth-credential"
+URL = "https://github.com/cern-mig/python-auth-credential"
 CLASSIFIERS = [
     "Development Status :: 3 - Alpha",
     "Intended Audience :: Developers",
