@@ -2,7 +2,7 @@
 python-auth-credential
 ======================
 
-.. image:: https://secure.travis-ci.org/mpaladin/python-auth-credential.png?branch=master
+.. image:: https://secure.travis-ci.org/cern-mig/python-auth-credential.png?branch=master
 
 Overview
 ========
