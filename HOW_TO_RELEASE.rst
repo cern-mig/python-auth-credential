@@ -4,10 +4,10 @@ How to release a new version of the module
 
 To release a new version of the moduleplease follow these steps:
 
-- update version number and date in the __init__.py file
-- updated CHANGES file with relative version number and date
-- git commit -am "preparing for release X.X"
-- git push
+- update version number and date in the ``__init__.py`` file
+- updated ``CHANGES`` file with relative version number and date
+- ``git commit -am "preparing for release X.X"``
+- ``git push``
 
 You are now almost ready to release a new version of the module.
 Make sure you read the pypi guide:
