@@ -1,5 +1,9 @@
 Change log for python-auth-credential
 
+X.X Thu Feb 28 2013
+    * [mp] pep8 compliancy
+    * [mp] moved module to cern-mig github organization
+
 0.6 Tue Apr 17 2012
 	* [mp] improvements and bug fixing
 
@@ -9,4 +13,4 @@ Change log for python-auth-credential
 0.1	Tue Nov 22 2011
 	* [mp] first release
 
-[mp] = Massimo Paladin <Massimo.Paladin@cern.ch>
+[mp] = Massimo Paladin <massimo.paladin@gmail.com>

@@ -4,7 +4,7 @@ NAME = 'auth.credential'
 VERSION = auth.credential.VERSION
 DESCRIPTION = "Credential abstraction"
 LONG_DESCRIPTION = """
-Credential representation
+Credential abstraction.
 """
 AUTHOR = 'Massimo Paladin'
 AUTHOR_EMAIL = 'massimo.paladin@gmail.com'
@@ -12,7 +12,7 @@ LICENSE = "ASL 2.0"
 PLATFORMS = "Any"
 URL = "https://github.com/cern-mig/python-auth-credential"
 CLASSIFIERS = [
-    "Development Status :: 3 - Alpha",
+    "Development Status :: 5 - Production/Stable",
     "Intended Audience :: Developers",
     "License :: OSI Approved :: Apache Software License",
     "Operating System :: Unix",
@@ -25,6 +25,7 @@ CLASSIFIERS = [
     "Programming Language :: Python :: 3.0",
     "Programming Language :: Python :: 3.1",
     "Programming Language :: Python :: 3.2",
+    "Programming Language :: Python :: 3.3",
     "Topic :: Software Development :: Libraries :: Python Modules"
 ]
 
