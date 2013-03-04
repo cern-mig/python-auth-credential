@@ -1,10 +1,10 @@
 Change log for python-auth-credential
 
-X.X Thu Feb 28 2013
-    * [mp] pep8 compliancy
-    * [mp] moved module to cern-mig github organization
+1.0	Mon Mar  4 2013
+	* [mp] pep8 compliancy
+	* [mp] moved module to cern-mig github organization
 
-0.6 Tue Apr 17 2012
+0.6	Tue Apr 17 2012
 	* [mp] improvements and bug fixing
 
 0.5	Fri Jan 20 2012
