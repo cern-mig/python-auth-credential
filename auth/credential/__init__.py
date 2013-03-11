@@ -13,7 +13,7 @@ http://pypi.python.org/pypi/auth.credential/
 
 An Perl implementation of the same credential abstraction is available
 in CPAN:
-http://search.cpan.org/~lcons/Authen-Credential/
+http://search.cpan.org/dist/Authen-Credential/
 
 Copyright (C) 2013 CERN
 """
