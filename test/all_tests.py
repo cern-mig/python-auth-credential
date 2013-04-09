@@ -18,7 +18,7 @@ import glob
 import unittest
 
 
-def create_authcredential_test_suite():
+def create_test_suite():
     """ create the suite with all the tests """
     test_file_strings = glob.glob('test/*test.py')
     module_strings = ['test.' + string[5:-3]
