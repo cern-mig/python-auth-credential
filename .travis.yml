@@ -10,8 +10,12 @@ python:
   - "3.3"
 # command to install dependencies
 install:
-  - pip install pep8 --use-mirrors
+  - pip install --use-mirrors pep8
+  - pip install --use-mirrors pylint
+  - curl -O -R -S -f -s https://raw.github.com/cern-mig/dev-tools/master/python/pylint.sh
+  - curl -O -R -S -f -s https://raw.github.com/cern-mig/dev-tools/master/python/.pylintrc
 # command to run tests
 script:
   - pep8 auth test
+  - sh pylint.sh --rcfile .pylintrc auth test
   - python setup.py test
