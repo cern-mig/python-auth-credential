@@ -17,5 +17,5 @@ install:
 # command to run tests
 script:
   - pep8 auth test
-  - sh pylint.sh --rcfile .pylintrc auth test || echo "*ignored*"
+  - sh pylint.sh auth test || echo "*ignored*"
   - python setup.py test
