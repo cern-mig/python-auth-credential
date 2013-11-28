@@ -35,7 +35,8 @@ class X509(Credential):
              'cert': {'optional': True},
              'key': {'optional': True},
              'pass': {'optional': True},
-             'ca': {'optional': True}}
+             'ca': {'optional': True},
+             'ca_file': {'optional': True}}
     _preparator = dict()
 
     def _prepare_stomppy(self):
