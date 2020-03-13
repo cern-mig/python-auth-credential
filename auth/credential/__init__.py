@@ -17,7 +17,7 @@ An Perl implementation of the same credential abstraction is available
 in CPAN:
 http://search.cpan.org/dist/Authen-Credential/
 
-Copyright (C) 2013 CERN
+Copyright (C) CERN 2013-2020
 """
 
 AUTHOR = "Massimo Paladin <massimo.paladin@gmail.com>"

@@ -18,7 +18,7 @@ name
 pass
     the associated (clear text) password
 
-Copyright (C) 2013 CERN
+Copyright (C) CERN 2013-2020
 """
 
 from auth.credential import Credential

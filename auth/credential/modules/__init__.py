@@ -1,5 +1,5 @@
 """
 Credential modules.
 
-Copyright (C) 2013 CERN
+Copyright (C) CERN 2013-2020
 """
