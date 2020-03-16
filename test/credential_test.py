@@ -149,5 +149,6 @@ class AuthTest(unittest.TestCase):
                          "stomppy.x509 prepare failed")
         print("...prepare ok")
 
+
 if __name__ == "__main__":
     unittest.main()

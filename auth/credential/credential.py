@@ -118,12 +118,12 @@ try:
 except ImportError:
     from urllib import quote, unquote
 
-_ID_RE = '[a-z][a-z0-9]*'
+_ID_RE = r'[a-z][a-z0-9]*'
 ID_RE = re.compile(_ID_RE)
-_SEP_CHARS = '[, ]'
+_SEP_CHARS = r'[, ]'
 SEP_CHARS = re.compile(_SEP_CHARS)
-_VAL_CHARS = 'a-zA-Z0-9/\-\+\_\~\.\:'
-_ID_VAL = "^(%s)=([%s\%%]*)$" % (_ID_RE, _VAL_CHARS)
+_VAL_CHARS = r'a-zA-Z0-9/\-\+\_\~\.\:'
+_ID_VAL = r'^(%s)=([%s\%%]*)$' % (_ID_RE, _VAL_CHARS)
 ID_VAL = re.compile(_ID_VAL)
 
 
