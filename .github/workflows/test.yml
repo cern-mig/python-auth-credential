@@ -8,6 +8,10 @@ jobs:
         python-version: [3.6, 3.7, 3.8, 3.9]
     steps:
       - uses: actions/checkout@v2
+      - name: Checkout dev-tools
+        uses: actions/checkout@v2
+        with:
+          repository: cern-mig/dev-tools
       - name: Set up Python ${{ matrix.python-version }}
         uses: actions/setup-python@v2
         with:
@@ -19,6 +23,8 @@ jobs:
       - name: Lint with pycodestyle and pylint
         run: |
           pycodestyle auth test
+          ls -l
+          pylint --rcfile dev-tools/python/.pylintrc -f text auth test
       - name: Test
         run: |
           python setup.py test
