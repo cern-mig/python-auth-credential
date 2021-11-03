@@ -2,8 +2,8 @@
 python-auth-credential
 ======================
 
-.. image:: https://secure.travis-ci.org/cern-mig/python-auth-credential.png?branch=master
-   :target: https://travis-ci.org/cern-mig/python-auth-credential
+.. image:: ![status](https://github.com/cern-mig/python-auth-credential/actions/workflows/test.yml/badge.svg)
+
 
 Overview
 ========
