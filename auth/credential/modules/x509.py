@@ -24,7 +24,7 @@ pass
 ca
     the path of the directory containing trusted certificates (optional)
 
-Copyright (C) CERN 2013-2020
+Copyright (C) CERN 2013-2021
 """
 
 from auth.credential import Credential

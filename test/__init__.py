@@ -1,7 +1,7 @@
 """
  Testing package for auth.credential
 
- Copyright (C) CERN 2013-2020
+ Copyright (C) CERN 2013-2021
 """
 
 import os

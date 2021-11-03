@@ -107,7 +107,7 @@ Here is for instance how it could end up using JSON::
 
 The same information could be stored in a configuration file.
 
-Copyright (C) CERN 2013-2020
+Copyright (C) CERN 2013-2021
 """
 
 from auth.credential.error import InvalidCredential
