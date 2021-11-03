@@ -5,7 +5,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        python-version: [3.6, 3.7, 3.8, 3.9]
+        python-version: [2.7, 3.4, 3.5, 3.6, 3.7, 3.8, 3.9, 3.10]
     steps:
       - name: Checkout
         uses: actions/checkout@v2
@@ -22,11 +22,12 @@ jobs:
         run: |
           python -m pip install --upgrade pip
           pip install pycodestyle pylint
-      - name: Lint with pycodestyle and pylint
+      - name: Lint with pycodestyle
         run: |
           pycodestyle auth test
-          ls -l
-          pylint --exit-zero --rcfile dev-tools/python/.pylintrc -f text auth test
+      - name: Lint with pylint
+        run: |
+          pylint --exit-zero --rcfile dev-tools/python/.pylintrc auth test
       - name: Test
         run: |
           python setup.py test
