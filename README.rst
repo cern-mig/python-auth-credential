@@ -2,7 +2,7 @@
 python-auth-credential
 ======================
 
-.. image:: ![status](https://github.com/cern-mig/python-auth-credential/actions/workflows/test.yml/badge.svg)
+.. image:: https://github.com/cern-mig/python-auth-credential/actions/workflows/test.yml/badge.svg
 
 
 Overview
