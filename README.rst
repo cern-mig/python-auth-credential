@@ -4,6 +4,7 @@ python-auth-credential
 
 .. image:: https://github.com/cern-mig/python-auth-credential/actions/workflows/test.yml/badge.svg
 
+WARNING: This software is not maintained anymore.
 
 Overview
 ========
